@@ -151,20 +151,28 @@ To send messages directly to your inbox via an API:
 
 ---
 
-## 🌐 Deploying to Vercel
+## 🌐 Deploying to GitHub Pages
 
-1. Push your repository to **GitHub**:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit of SHUEB.DEV Universe"
-   git remote add origin https://github.com/<your-username>/shueb-dev.git
-   git push -u origin main
-   ```
-2. Log in to [Vercel](https://vercel.com).
-3. Click **"Add New Project"** and select your GitHub repository.
-4. Vercel automatically detects **Vite**:
-   - **Framework Preset:** Vite
-   - **Build Command:** `npm run build`
-   - **Output Directory:** `dist`
-5. Click **Deploy**. Your digital universe will be live in seconds!
+This repository is configured to deploy automatically to GitHub Pages.
+
+### One-time setup
+
+1. Push the project to GitHub.
+2. Open your repository on GitHub.
+3. Go to **Settings → Pages**.
+4. Under **Build and deployment → Source**, choose **GitHub Actions**.
+5. Go to **Actions** and wait for **Deploy SHUEB.DEV to GitHub Pages** to finish.
+6. Your site will be available at:
+
+`https://shuebuzz.github.io/Hussain-Muhammad-Shueb/`
+
+You do **not** need to run the build yourself on GitHub. The workflow installs the dependencies, builds the Vite app, and publishes the `dist` folder.
+
+### If you later use Vercel
+
+The same project can also be deployed to Vercel. Vercel will use:
+
+- Framework: Vite
+- Build command: `npm run build`
+- Output directory: `dist`
+

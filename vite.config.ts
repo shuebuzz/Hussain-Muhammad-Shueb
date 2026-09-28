@@ -5,6 +5,9 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // GitHub Pages serves this project from /Hussain-Muhammad-Shueb/.
+    // Vercel and local development continue to use the normal root path.
+    base: process.env.GITHUB_ACTIONS ? '/Hussain-Muhammad-Shueb/' : '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
